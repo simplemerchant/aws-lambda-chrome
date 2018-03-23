@@ -1,9 +1,11 @@
 'use strict'
 
-const getChromePath = require('./src')({
+const getChromePath = require('./lib/@simple_merchant/aws-lambda-chrome')({
   path: '/tmp'
 })
-;(async () => {
-  const path = await getChromePath()
-  console.log(path)
-})()
+describe('aws-lambda-chrome', () => {
+  it('getChromePath', async () => {
+    const path = await getChromePath()
+    expect(path).toEqual('/tmp/headless_shell')
+  })
+})
