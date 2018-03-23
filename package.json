@@ -3,7 +3,7 @@
   "description": "Chrome binary compatible with AWS Lambda.",
   "homepage": "https://documentup.com/microlinkhq/aws-lambda-chrome",
   "version": "1.1.2",
-  "main": "src/index.js",
+  "main": "lib/@simple_merchant/aws-lambda-chrome.js",
   "author": {
     "email": "hello@microlink.io",
     "name": "microlink.io",
@@ -39,6 +39,7 @@
     "finepack": "latest",
     "git-dirty": "latest",
     "husky": "latest",
+    "jest": "^22.4.3",
     "lint-staged": "latest",
     "prettier-standard": "latest",
     "standard": "latest",
@@ -60,7 +61,7 @@
     "lint": "standard-markdown && standard",
     "precommit": "lint-staged",
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
-    "test": "exit 0"
+    "test": "jest"
   },
   "license": "MIT",
   "lint-staged": {
